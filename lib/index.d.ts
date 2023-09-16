@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, Ref } from "react";
 import { TextInputProps, StyleProp, TextStyle, ViewStyle } from "react-native";
 import {
   CountryCode,
@@ -297,6 +297,7 @@ export default class PhoneInput extends Component<
     | "HK"
     | "AX";
   getCallingCode: () => string | undefined;
+  getTextInputRef: () => Ref | undefined;
   isValidNumber: (number: string) => boolean;
   onSelect: (country: Country) => void;
   getNumberAfterPossiblyEliminatingZero: () => {number: string , formattedNumber: string };
